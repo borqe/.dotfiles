@@ -1,3 +1,2 @@
 require("borqe")
-print("Hello")
 
