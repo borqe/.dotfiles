@@ -1,6 +1,6 @@
 require('lspconfig').gdscript.setup{
     on_attach = on_attach,
     flags = {
-      debounce_text_changes = 150,
+        debounce_text_changes = 150,
     }
-  }
+}
