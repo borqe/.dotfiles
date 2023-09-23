@@ -17,6 +17,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- the actual plugins go here
 local plugins = {
+	  {'williamboman/mason.nvim'},
+  {'williamboman/mason-lspconfig.nvim'},
     {
     'nvim-telescope/telescope.nvim', tag = '0.1.3',
 -- or                              , branch = '0.1.x',
@@ -35,20 +37,6 @@ local plugins = {
 	    "tpope/vim-fugitive"
     },
     {
-	  "VonHeikemen/lsp-zero.nvim",
-	  branch = 'v2.x',
-	  dependencies = {
-	    -- LSP Support
-	    {'neovim/nvim-lspconfig'},             	-- Required
-	    {'williamboman/mason.nvim'},           	-- Optional
-	    {'williamboman/mason-lspconfig.nvim'}, 	-- Optional
-
-	    -- Autocompletion
-	    {'hrsh7th/nvim-cmp'},     			-- Required
-	    {'hrsh7th/cmp-nvim-lsp'}, 			-- Required
-	    {'L3MON4D3/LuaSnip'}     			-- Required
-    },
-    {
 	"epwalsh/obsidian.nvim",
 	  lazy = true,
 	  dependencies = {
@@ -57,8 +45,27 @@ local plugins = {
 	  opts = {
 	    dir = "~/code/notebook",
 	  }
+    },
+    -- LSP Support
+  {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v3.x',
+    lazy = true,
+    config = false,
+  },
+  {
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      {'hrsh7th/cmp-nvim-lsp'},
     }
-  }
+  },
+  -- Autocompletion
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      {'L3MON4D3/LuaSnip'}
+    },
+  },
 }
 
 require("lazy").setup(plugins, opts)

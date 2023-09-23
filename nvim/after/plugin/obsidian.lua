@@ -1,4 +1,3 @@
-
 require("obsidian").setup({
 
   -- Required
@@ -11,3 +10,4 @@ require("obsidian").setup({
   },
 
 })
+
