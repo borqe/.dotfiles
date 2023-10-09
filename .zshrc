@@ -1,8 +1,7 @@
-ZSH_THEME="robbyrussell"
-
+ZSH_THEME="refined"
+PS1='%n@%m %~$ '
 # Make an alias for python
-alias python=python3
-
+alias -g python="python3"
 # Make an alias for neovim
-alias vim=nvim
-
+alias -g vim="nvim"
+alias -g vi="nvim"
