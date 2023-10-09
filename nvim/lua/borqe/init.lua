@@ -24,11 +24,6 @@ local plugins = {
         'nvim-telescope/telescope.nvim', tag = '0.1.3',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    { 
-        "catppuccin/nvim", 
-        name = "catppuccin", 
-        priority = 1000 
-    },
     {
         "nvim-treesitter/nvim-treesitter", 
         name = "nvim-treesitter"
@@ -65,10 +60,16 @@ local plugins = {
             {'L3MON4D3/LuaSnip'}
         },
     },
+
+    -- Themes
+    {
+        'luisiacc/gruvbox-baby',
+        branch = 'main',
+    },
 }
 
 require("lazy").setup(plugins, opts)
 
 -- VISUAL   
-vim.cmd.colorscheme "catppuccin-mocha"
+vim.cmd.colorscheme "gruvbox-baby"
 
