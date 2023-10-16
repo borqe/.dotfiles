@@ -20,6 +20,6 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 -- Helper characters 
-vim.opt.listchars = { space = '_', tab = '>~', eol = '↵' }
+vim.opt.listchars = { tab = '>~', eol = '↵' }
 vim.opt.list = true
 
