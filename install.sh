@@ -1,13 +1,15 @@
 #!/bin/sh
 #
 # VARIABLES
-REPO_PATH="/mnt/d/repos"
+REPO_PATH="/mnt/c/users/robertas/repos"
 
 # Install applications
 sudo apt install build-essential
 
 # install homebrew 
-/bin/bash -c"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/user/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 brew install zsh
 brew install neovim
